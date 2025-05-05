@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LinkedIn Job CSV Downloader</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      background-color: #0077b5;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #005e93;
+    }
+    .status {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    .loading {
+      display: none;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #0077b5;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 2s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h2>LinkedIn Job CSV Downloader</h2>
+  <p>Click the button below to download LinkedIn job data as a CSV file.</p>
+  
+  <button id="downloadBtn">Download Jobs CSV</button>
+  
+  <div id="loading" class="loading">
+    <p>Processing jobs data. This may take a few minutes...</p>
+    <div class="spinner"></div>
+  </div>
+  
+  <div id="status" class="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
